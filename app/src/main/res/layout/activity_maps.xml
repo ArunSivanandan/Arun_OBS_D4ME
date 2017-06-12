@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rlt_map"
+    tools:context=".sprint1.views.fragments.MapsActivity" >
+
+    <include
+        android:id="@+id/bottom_tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/bottom_tab_bar_layout"
+        android:layout_alignParentBottom="true" />
+
+    <fragment
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_tab_layout"
+        android:name="com.google.android.gms.maps.SupportMapFragment" />
+
+    <com.obs.deliver4me.customviews.VerticalSeekBar
+        android:id="@+id/seekbar_radius"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_tab_layout"
+        android:layout_margin="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:progressDrawable="@drawable/seekbar_background"
+        android:thumb="@drawable/seekbar_circle" />
+
+    <TextView
+        android:id="@+id/tv_miles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="8dp"
+        android:layout_margin="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/pure_white"
+        android:background="@drawable/rounded_corners_background" />
+</RelativeLayout>

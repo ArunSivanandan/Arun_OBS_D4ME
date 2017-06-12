@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Deliver 4 Me</string>
+
+    <!--DIALOG MESSAGES-->
+    <string name="continue_text">CONTINUE</string>
+    <string name="dialog_title"><![CDATA[Welcome to SendOnCard<sup><small><font color=#ff6400>TM</font></small></sup>!]]></string>
+    <string name="txt_accept_term_dialog">AGREE</string>
+    <string name="open_drawer">Open Navigation Drawer</string>
+    <string name="close_drawer">Close Navigation Drawer</string>
+
+    <!--Map Bottom Tab bar-->
+    <string name="map_bike">Bike</string>
+    <string name="map_car">Car</string>
+    <string name="map_minivan">Minivan</string>
+    <string name="map_truck">CargoTruck</string>
+
+    <!--ImageView Content Description-->
+    <string name="splash_logo">Deliver4Me Splash Logo</string>
+
+
+    <string-array name="navDrawerItemsUser">
+        <item>Deliver an item for someone</item>
+        <item>Get my item delivered</item>
+        <item>View/Track my deliveries</item>
+        <item>My Messages</item>
+        <item>My Profile</item>
+        <item>Settings</item>
+    </string-array>
+
+    <string-array name="navDrawerItemsDA">
+        <item>My Request</item>
+        <item>View/Track my deliveries</item>
+        <item>My Messages</item>
+        <item>My Profile</item>
+        <item>Settings</item>
+    </string-array>
+
+    <string-array name="navDrawerIconsUser">
+        <item>@drawable/navigator_icon_one</item>
+        <item>@drawable/navigator_icon_two</item>
+        <item>@drawable/navigator_icon_three</item>
+        <item>@drawable/navigator_icon_four</item>
+        <item>@drawable/navigator_icon_five</item>
+        <item>@drawable/navigator_icon_six</item>
+    </string-array>
+
+    <string-array name="navDrawerIconsDA">
+        <item>@android:drawable/ic_menu_search</item>
+        <item>@android:drawable/ic_menu_search</item>
+        <item>@android:drawable/ic_menu_search</item>
+        <item>@android:drawable/ic_menu_search</item>
+        <item>@android:drawable/ic_menu_search</item>
+    </string-array>
+    <string name="title_activity_maps">Map</string>
+</resources>

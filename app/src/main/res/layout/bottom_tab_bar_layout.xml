@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RadioGroup
+        android:id="@+id/rdg_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="bottom"
+        android:background="@color/pure_white"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:weightSum="4">
+
+        <RadioButton
+            android:id="@+id/rb_feed"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawablePadding="2dp"
+            android:drawableTop="@android:drawable/ic_menu_search"
+            android:gravity="center"
+            android:text="@string/map_bike"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@drawable/selector_tab_text_color"
+            android:textSize="11sp" />
+
+        <RadioButton
+            android:id="@+id/rb_explore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:drawablePadding="2dp"
+            android:drawableTop="@android:drawable/ic_menu_search"
+            android:gravity="center"
+            android:text="@string/map_car"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@drawable/selector_tab_text_color"
+            android:textSize="11sp" />
+
+        <RadioButton
+            android:id="@+id/rb_buzz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawablePadding="2dp"
+            android:drawableTop="@android:drawable/ic_menu_search"
+            android:gravity="center"
+            android:text="@string/map_minivan"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@drawable/selector_tab_text_color"
+            android:textSize="11sp" />
+
+        <RadioButton
+            android:id="@+id/rb_buzz_notification"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="false"
+            android:drawablePadding="2dp"
+            android:drawableTop="@android:drawable/ic_menu_search"
+            android:gravity="center"
+            android:text="@string/map_truck"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@drawable/selector_tab_text_color"
+            android:textSize="11sp" />
+
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/rlt_unread_notification_icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+    </RelativeLayout>
+</RelativeLayout>
+
