@@ -1,32 +1,90 @@
 
 package com.obs.deliver4me.datamodels;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
 public class JsonResponse {
 
-    @SerializedName("status")
-    @Expose
-    private Integer status;
-    @SerializedName("msg")
-    @Expose
-    private String msg;
+    String url;
+    String method;
+    String strRequest;
+    String strResponse;
+    int responseCode;
+    int requestCode;
+    String errorMsg;
+    boolean isSuccess;
 
-    public Integer getStatus() {
-        return status;
+    public String getUrl() {
+        return url;
     }
 
-    public void setStatus(Integer status) {
-        this.status = status;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
-    public String getMsg() {
-        return msg;
+    public String getMethod() {
+        return method;
     }
 
-    public void setMsg(String msg) {
-        this.msg = msg;
+    public void setMethod(String method) {
+        this.method = method;
+    }
+
+    public String getStrRequest() {
+        return strRequest;
+    }
+
+    public void setStrRequest(String strRequest) {
+        this.strRequest = strRequest;
+    }
+
+    public String getStrResponse() {
+        return strResponse;
+    }
+
+    public void setStrResponse(String strResponse) {
+        this.strResponse = strResponse;
+    }
+
+    public String getErrorMsg() {
+        return errorMsg;
+    }
+
+    public void setErrorMsg(String errorMsg) {
+        this.errorMsg = errorMsg;
+    }
+
+    public boolean isSuccess() {
+        return isSuccess;
+    }
+
+    public void setIsSuccess(boolean isSuccess) {
+        this.isSuccess = isSuccess;
+    }
+
+    public int getResponseCode() {
+        return responseCode;
+    }
+
+    public void setResponseCode(int responseCode) {
+        this.responseCode = responseCode;
+    }
+
+    public int getRequestCode() {
+        return requestCode;
+    }
+
+    public void setRequestCode(int requestCode) {
+        this.requestCode = requestCode;
+    }
+
+    public void clearAll() {
+        this.url = "";
+        this.method = "";
+        this.errorMsg = "";
+        this.strRequest = "";
+        this.strResponse = "";
+        this.requestCode = 0;
+        this.responseCode = 0;
+        this.isSuccess = false;
     }
 
 }

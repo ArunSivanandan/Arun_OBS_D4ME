@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/transparent">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_member_image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/default_profile"
+            app:civ_border_color="@color/transparent_hint_color"
+            app:civ_border_width="2dp"/>
+
+        <LinearLayout
+            android:id="@+id/llt_field_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_member_image"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/username_text_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/hint_color"
+                android:theme="@style/MyEditTextTheme">
+
+                <org.custom_font_library.CustomEditText
+                    style="@style/Linotte_Light"
+                    android:id="@+id/edt_username"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edt_username_hint"
+                    android:textColorHint="@color/hint_color"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:drawableLeft="@drawable/username"
+                    android:drawableStart="@drawable/username"
+                    android:drawablePadding="15dp"
+                    android:paddingTop="10dp"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:paddingBottom="10dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/hint_color"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:id="@+id/view_username"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/hint_color"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/pwd_text_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/hint_color"
+                android:theme="@style/MyEditTextTheme">
+
+                <org.custom_font_library.CustomEditText
+                    style="@style/Linotte_Light"
+                    android:id="@+id/edt_phone_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edt_phone_no_hint"
+                    android:textColorHint="@color/hint_color"
+                    android:background="@null"
+                    android:inputType="number"
+                    android:paddingTop="10dp"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:paddingBottom="10dp"
+                    android:drawableLeft="@drawable/phone"
+                    android:drawableStart="@drawable/phone"
+                    android:drawablePadding="15dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/hint_color"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:id="@+id/view_password"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/hint_color"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/mail_text_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/hint_color"
+                android:theme="@style/MyEditTextTheme">
+
+                <org.custom_font_library.CustomEditText
+                    style="@style/Linotte_Light"
+                    android:id="@+id/edt_mail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edt_email_hint"
+                    android:textColorHint="@color/hint_color"
+                    android:background="@null"
+                    android:inputType="textEmailAddress"
+                    android:paddingTop="10dp"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:paddingBottom="10dp"
+                    android:drawableLeft="@drawable/email_icon"
+                    android:drawableStart="@drawable/email_icon"
+                    android:drawablePadding="15dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/hint_color"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:id="@+id/view_email"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/hint_color"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/confirm_pwd_text_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/hint_color"
+                android:theme="@style/MyEditTextTheme">
+
+                <org.custom_font_library.CustomEditText
+                    style="@style/Linotte_Light"
+                    android:id="@+id/edt_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/edt_about_hint"
+                    android:textColorHint="@color/hint_color"
+                    android:background="@null"
+                    android:inputType="text"
+                    android:paddingTop="10dp"
+                    android:paddingStart="30dp"
+                    android:paddingEnd="30dp"
+                    android:paddingBottom="10dp"
+                    android:drawableLeft="@drawable/about"
+                    android:drawableStart="@drawable/about"
+                    android:drawablePadding="15dp"
+                    android:textSize="16sp"
+                    android:textColor="@color/hint_color"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:id="@+id/view_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="25dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginEnd="25dp"
+                android:background="@color/hint_color"/>
+        </LinearLayout>
+
+        <org.custom_font_library.CustomTextView
+            style="@style/Linotte_Light"
+            android:id="@+id/tv_create_profile_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@+id/llt_field_container"
+            android:padding="10dp"
+            android:gravity="center"
+            android:background="@drawable/rounded_corners_background"
+            android:textSize="16sp"
+            android:textColor="@color/pure_white"
+            android:text="@string/txt_save_btn"
+            android:filterTouchesWhenObscured="true" />
+</RelativeLayout>

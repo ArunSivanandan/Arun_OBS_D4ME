@@ -5,11 +5,14 @@ import android.content.Context;
 import android.content.SharedPreferences;
 
 import com.obs.deliver4me.configs.Constants;
+import com.obs.deliver4me.configs.NetworkHandler;
 import com.obs.deliver4me.configs.RunTimePermission;
 import com.obs.deliver4me.configs.SessionManager;
 import com.obs.deliver4me.customviews.CustomDialog;
+import com.obs.deliver4me.datamodels.JsonResponse;
 import com.obs.deliver4me.utils.CTypeface;
 import com.obs.deliver4me.utils.CommonMethods;
+import com.obs.deliver4me.utils.WebServiceUtils;
 
 import java.util.ArrayList;
 
@@ -72,4 +75,21 @@ public class AppContainerModule {
         return new CustomDialog();
     }
 
+    @Provides
+    @Singleton
+    NetworkHandler providesNetworkHandler(Application application) {
+        return new NetworkHandler(application);
+    }
+
+    @Provides
+    @Singleton
+    JsonResponse providesJsonResponse() {
+        return new JsonResponse();
+    }
+
+    @Provides
+    @Singleton
+    WebServiceUtils providesWebServiceUtils() {
+        return new WebServiceUtils();
+    }
 }

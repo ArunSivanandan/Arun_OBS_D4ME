@@ -27,7 +27,8 @@
             android:layout_centerVertical="true"
             android:src="@android:drawable/ic_menu_search" />
 
-        <TextView
+        <org.custom_font_library.CustomTextView
+            style="@style/Linotte_Light"
             android:id="@+id/tv_nav_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -8,12 +8,13 @@
         android:id="@+id/iv_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:padding="15dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
-        android:src="@android:drawable/ic_menu_close_clear_cancel"/>
+        android:src="@drawable/back_arrow"/>
 
-    <TextView
+    <org.custom_font_library.CustomTextView
+        style="@style/Linotte_Semi_Bold"
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,5 +33,25 @@
         android:padding="10dp"
         android:adjustViewBounds="true"
         android:scaleType="centerCrop"
+        android:src="@drawable/menu_icon"
         android:visibility="gone"/>
+
+    <org.custom_font_library.CustomTextView
+        style="@style/Linotte_Semi_Bold"
+        android:id="@+id/tv_skip_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:text="@string/txt_skip"
+        android:textColor="@color/orange"
+        android:visibility="gone"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tv_title"
+        android:background="@color/transparent_hint_color"/>
 </RelativeLayout>

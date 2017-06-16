@@ -1,5 +1,6 @@
 package com.obs.deliver4me.configs;
 
+import android.app.Application;
 import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.Network;
@@ -13,22 +14,18 @@ import android.os.Build;
  */
 public class NetworkHandler {
 
-    public static NetworkHandler networkHandler = null;
+    private Application application;
 
-    public static NetworkHandler defaultHandler() {
-        if (networkHandler == null) {
-            networkHandler = new NetworkHandler();
-        }
-        return networkHandler;
+    public NetworkHandler(Application application) {
+        this.application = application;
     }
-
     /**
      * Checks the network status
      *
      * @return boolean value of network status
      */
-    public boolean isNetworkAvailable(Context context) {
-        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+    public boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager = (ConnectivityManager) application.getSystemService(Context.CONNECTIVITY_SERVICE);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             Network[] networks = connectivityManager.getAllNetworks();
             NetworkInfo networkInfo;

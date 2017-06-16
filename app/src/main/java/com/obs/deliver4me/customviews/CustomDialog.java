@@ -2,17 +2,15 @@ package com.obs.deliver4me.customviews;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.os.Build;
 import android.support.v4.app.FragmentManager;
-import android.text.Html;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.obs.deliver4me.R;
 import com.obs.deliver4me.application.AppController;
-import com.obs.deliver4me.configs.Constants;
 import com.obs.deliver4me.utils.CTypeface;
 
 import javax.inject.Inject;
@@ -34,6 +32,7 @@ public class CustomDialog extends BaseDialogFragment {
     private TextView allowTxt;
     private TextView denyTxt;
     private TextView okTxt;
+    private LinearLayout lltAllowDenyBtn;
     private ImageView customDialogImage;
     private boolean isPermissionDialog = false;
     private btnOkClick okClickListener;
@@ -64,13 +63,17 @@ public class CustomDialog extends BaseDialogFragment {
         this.okClickListener = okClickListener;
         this.mActivity = null;
         isPermissionDialog = false;
-        if(isError)
-        {
-            setLayoutId(R.layout.activity_custom_dialog_failure);
-        }
-        else {
-            setLayoutId(R.layout.activity_custom_dialog);
-        }
+        setLayoutId(R.layout.activity_custom_dialog);
+    }
+
+    public CustomDialog(String title, String message, btnOkClick okClickListener) {
+        this.title=title;
+        this.message = message;
+        this.okClickListener = okClickListener;
+        this.mActivity = null;
+        isPermissionDialog = false;
+        btnCofirmTxt = "OK";
+        setLayoutId(R.layout.activity_custom_dialog);
     }
 
     public CustomDialog(String title, String message, int customDialogImageSrc, String btnPositiveBtnTxt, String btnNegativeBtnTxt, btnAllowClick allowClickListener, btnDenyClick denyClickListener) {
@@ -86,16 +89,6 @@ public class CustomDialog extends BaseDialogFragment {
         setLayoutId(R.layout.activity_custom_dialog);
     }
 
-    public CustomDialog(String title, String message, String btnCofirmTxt, btnOkClick okClickListener) {
-        this.title=title;
-        this.message = message;
-        this.btnCofirmTxt = btnCofirmTxt;
-        this.okClickListener = okClickListener;
-        this.mActivity = null;
-        isPermissionDialog = false;
-        setLayoutId(R.layout.activity_custom_dialog_terms);
-    }
-
     @Override
     public void initViews(View v) {
         super.initViews(v);
@@ -105,40 +98,30 @@ public class CustomDialog extends BaseDialogFragment {
         this.allowTxt = (TextView) v.findViewById(R.id.customAllowTxt);
         this.denyTxt = (TextView) v.findViewById(R.id.customDenyTxt);
         this.okTxt = (TextView) v.findViewById(R.id.customOkTxt);
-        customDialogImage = (ImageView) v.findViewById(R.id.customDialogImage);
+        lltAllowDenyBtn = (LinearLayout) v.findViewById(R.id.llt_allow_deny_btn);
+//        customDialogImage = (ImageView) v.findViewById(R.id.customDialogImage);
 
-        this.dialogTitle.setTypeface(cTypeface.getFontStyle(Constants.FontStyle.BOLD, getActivity()));
-        this.dialogMessage.setTypeface(cTypeface.getFontStyle(Constants.FontStyle.REGULAR, getActivity()));
-
+        this.dialogTitle.setText(title);
+        this.dialogMessage.setText(message);
 
         this.dialogMessage.setMovementMethod(new ScrollingMovementMethod());
         if (isPermissionDialog) {
             this.allowTxt.setVisibility(View.VISIBLE);
             this.denyTxt.setVisibility(View.VISIBLE);
+            lltAllowDenyBtn.setVisibility(View.VISIBLE);
             this.okTxt.setVisibility(View.GONE);
             this.allowTxt.setText(btnPositiveBtnTxt);
             this.denyTxt.setText(btnNegativeBtnTxt);
         } else {
+            lltAllowDenyBtn.setVisibility(View.GONE);
             this.allowTxt.setVisibility(View.GONE);
             this.denyTxt.setVisibility(View.GONE);
             this.okTxt.setVisibility(View.VISIBLE);
             this.okTxt.setText(btnCofirmTxt);
         }
 
-        if (Build.VERSION.SDK_INT >= 24) {
-            this.dialogTitle.setText(Html.fromHtml(title,0));
-        } else {
-            this.dialogTitle.setText(Html.fromHtml(title));
-        }
-        if (Build.VERSION.SDK_INT >= 24) {
-            this.dialogMessage.setText(Html.fromHtml(message,0));
-        } else {
-            this.dialogMessage.setText(Html.fromHtml(message));
-        }
-        customDialogImage.setImageResource(customDialogImageSrc);
         initEvent(v);
-        setCancelable(true);
-        getDialog().setCanceledOnTouchOutside(true);
+        setCancelable(false);
     }
 
     @Override
@@ -179,8 +162,18 @@ public class CustomDialog extends BaseDialogFragment {
         });
     }
 
-    public void showDialog(FragmentManager fm, String message, int customDialogImage, String btnCofirmTxt, btnOkClick okClickListener) {
-        CustomDialog dialog = new CustomDialog("SUCCESS",message, customDialogImage, btnCofirmTxt, okClickListener, false);
+    public void showDialog(FragmentManager fm, String title, String message, int customDialogImage, String btnCofirmTxt, btnOkClick okClickListener) {
+        CustomDialog dialog = new CustomDialog(title, message, customDialogImage, btnCofirmTxt, okClickListener, false);
+        dialog.show(fm, "");
+    }
+
+    public void showDialog(FragmentManager fm, String title, String message) {
+        CustomDialog dialog = new CustomDialog(title, message, null);
+        dialog.show(fm, "");
+    }
+
+    public void showDialog(FragmentManager fm, String title, String message, btnOkClick okClickListener) {
+        CustomDialog dialog = new CustomDialog(title, message, okClickListener);
         dialog.show(fm, "");
     }
 

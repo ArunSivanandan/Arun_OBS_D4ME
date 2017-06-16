@@ -2,24 +2,24 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@android:id/background">
         <shape android:shape="line" >
-        <stroke android:width="5dp" android:color="@color/signIn_txt" />
+        <stroke android:width="5dp" android:color="@color/hint_color" />
         <corners android:radius="5dp" />
         <gradient
             android:angle="270"
-            android:endColor="@color/signIn_txt"
-            android:startColor="@color/signIn_txt" />
+            android:endColor="@color/hint_color"
+            android:startColor="@color/hint_color" />
     </shape>
     </item>
 
     <item android:id="@+id/progressshape">
         <clip>
             <shape android:shape="line" >
-                <stroke android:width="5dp" android:color="@color/signIn_txt"/>
+                <stroke android:width="5dp" android:color="@color/hint_color"/>
                 <corners android:radius="5dp" />
                 <gradient
                     android:angle="270"
-                    android:endColor="@color/signIn_txt"
-                    android:startColor="@color/signIn_txt" />
+                    android:endColor="@color/hint_color"
+                    android:startColor="@color/hint_color" />
             </shape>
         </clip>
     </item>

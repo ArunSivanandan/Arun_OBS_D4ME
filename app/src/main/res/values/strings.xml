@@ -7,6 +7,27 @@
     <string name="txt_accept_term_dialog">AGREE</string>
     <string name="open_drawer">Open Navigation Drawer</string>
     <string name="close_drawer">Close Navigation Drawer</string>
+    <string name="ok_Btn">OK</string>
+    <string name="cancel_Btn">CANCEL</string>
+    <string name="empty_email">Enter a email</string>
+    <string name="empty_password">Enter a password</string>
+    <string name="empty_username">Enter a username</string>
+    <string name="empty_confirm_password">Enter a confirm password</string>
+    <string name="Invalid_email">Invalid email address</string>
+    <string name="Invalid_Password">Password should contain six characters and one digit</string>
+    <string name="Invalid_confirm_password">Password does not match with confirm password</string>
+    <string name="empty_fields">Enter all the fields</string>
+    <string name="login_success_msg">Login Successful!</string>
+    <string name="signup_success_msg">Signup Successful!</string>
+    <string name="success_msg">SUCCESS</string>
+    <string name="error_msg">ERROR</string>
+    <string name="no_internet_connection">Please check your Internet Connection</string>
+    <string name="connection_timeout">Connection Timeout. Please check your Internet Connection</string>
+    <string name="txt_skip">Skip</string>
+    <string name="upload_option">Upload option</string>
+
+    <!--MyMessages Screen-->
+    <string name="my_message_title">My Messages</string>
 
     <!--Map Bottom Tab bar-->
     <string name="map_bike">Bike</string>
@@ -17,7 +38,64 @@
     <!--ImageView Content Description-->
     <string name="splash_logo">Deliver4Me Splash Logo</string>
 
+    <!--Login Screen-->
+    <string name="edt_email_hint">E-MAIL</string>
+    <string name="edt_password_hint">PASSWORD</string>
+    <string name="txt_forgotpwd">Forgot Password?</string>
+    <string name="login_btn">Login</string>
+    <string name="signup_btn">Sign Up</string>
+    <string name="txt_login_with">Log In With</string>
 
+    <!--Registration Screen-->
+    <string name="edt_username_hint">USERNAME</string>
+    <string name="edt_confirm_pwd_hint">CONFIRM PASSWORD</string>
+    <string name="signup_screen_title">Sign Up</string>
+
+    <!--Forgot Password Screen-->
+    <string name="txt_msg">We\'ll send you an email to reset your password</string>
+    <string name="edit_email_forgot_hint">Email ID</string>
+    <string name="forgot_pwd_screen_title">Forgot Password</string>
+    <string name="submit_btn">Submit</string>
+
+    <!--Create Profile Screen-->
+    <string name="member_tab">Member</string>
+    <string name="vehicle_tab">Vehicle</string>
+    <string name="create_profile_title">Create Profile</string>
+    <string name="edt_phone_no_hint">PHONE NO</string>
+    <string name="edt_about_hint">ABOUT</string>
+    <string name="edt_vehicle_type_hint">VEHICLE TYPE</string>
+    <string name="edt_vehicle_no_hint">VEHICLE NO</string>
+    <string name="edt_license_no_hint">LICENSE NO</string>
+    <string name="txt_charges_include">Charges Include</string>
+    <string name="edt_insurance_hint">INSURANCE</string>
+    <string name="edt_gas_hint">GAS</string>
+    <string name="edt_labour_hint">LABOUR</string>
+    <string name="edt_cost_hint">COST PER KM</string>
+    <string name="txt_additional_provision">Additional Provisions</string>
+    <string name="txt_take_photo">Take Photo</string>
+    <string name="no_of_img_uploaded"> Images Uploaded</string>
+    <string name="txt_save_btn">Save</string>
+
+    <!--Change Password Screen-->
+    <string name="edt_current_pwd_hint">CURRENT PASSWORD</string>
+    <string name="edt_new_pwd_hint">NEW PASSWORD</string>
+    <string name="edt_changepwdconfirm_pwd_hint">CONFIRM PASSWORD</string>
+    <string name="txt_change_pwd_title">Change Password</string>
+
+    <!--Reset Password Screen-->
+    <string name="edt_enter_token_hint">ENTER TOKEN</string>
+    <string name="txt_reset_pwd_title">Reset Password</string>
+
+    <!--Settings Screen-->
+    <string name="txt_notification_settings">Notification Settings</string>
+    <string name="txt_logout">Logout</string>
+    <string name="txt_settings_title">Settings</string>
+
+    <!--View Profile Screen-->
+    <string name="profile_title">Profile</string>
+
+    <!--facebook id-->
+    <string name="facebook_app_id">280788275725476</string>
     <string-array name="navDrawerItemsUser">
         <item>Deliver an item for someone</item>
         <item>Get my item delivered</item>

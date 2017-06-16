@@ -4,6 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Deliver4Me.iml" filepath="$PROJECT_DIR$/Deliver4Me.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/cropper/cropper.iml" filepath="$PROJECT_DIR$/cropper/cropper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/custom-font-library/custom-font-library.iml" filepath="$PROJECT_DIR$/custom-font-library/custom-font-library.iml" />
     </modules>
   </component>
 </project>

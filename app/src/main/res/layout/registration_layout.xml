@@ -2,6 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:focusableInTouchMode="true"
+    android:focusable="true"
     android:background="@color/pure_white">
 
     <include
@@ -10,87 +13,200 @@
         android:layout_height="wrap_content"
         layout="@layout/header_layout"/>
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/header_layout">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/header_layout"
+        android:orientation="vertical">
 
-        <LinearLayout
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/username_text_input_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical">
+            android:textColorHint="@color/hint_color"
+            android:theme="@style/MyEditTextTheme">
 
-            <TextView
-                android:id="@+id/tv_label_username"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginStart="50dp"
-                android:textSize="14sp"
-                android:text="E-MAIL"
-                android:textColor="@color/progress_loading_color"/>
-
-            <EditText
+            <org.custom_font_library.CustomEditText
+                style="@style/Linotte_Light"
                 android:id="@+id/edt_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="E-Mail"
-                android:textColorHint="@color/signIn_txt"
+                android:hint="@string/edt_username_hint"
+                android:textColorHint="@color/hint_color"
+                android:background="@null"
+                android:inputType="text"
+                android:drawableLeft="@drawable/user_icon"
+                android:drawableStart="@drawable/user_icon"
+                android:drawablePadding="15dp"
+                android:paddingTop="10dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/hint_color"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <View
+            android:id="@+id/view_username"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/hint_color"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/mail_text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/hint_color"
+            android:theme="@style/MyEditTextTheme">
+
+            <org.custom_font_library.CustomEditText
+                style="@style/Linotte_Light"
+                android:id="@+id/edt_mail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/edt_email_hint"
+                android:textColorHint="@color/hint_color"
                 android:background="@null"
                 android:inputType="textEmailAddress"
-                android:drawableLeft="@android:drawable/ic_dialog_email"
-                android:drawableStart="@android:drawable/ic_dialog_email"
-                android:drawablePadding="7dp"
-                android:padding="10dp"
+                android:paddingTop="10dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="10dp"
+                android:drawableLeft="@drawable/email_icon"
+                android:drawableStart="@drawable/email_icon"
+                android:drawablePadding="15dp"
                 android:textSize="16sp"
-                android:textColor="@color/signIn_txt"/>
+                android:textColor="@color/hint_color"/>
+        </android.support.design.widget.TextInputLayout>
 
-            <View
-                android:id="@+id/view_username"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginBottom="10dp"
-                android:background="@color/black"/>
+        <View
+            android:id="@+id/view_email"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/hint_color"/>
 
-            <TextView
-                android:id="@+id/tv_label_password"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="50dp"
-                android:layout_marginStart="50dp"
-                android:textSize="14sp"
-                android:text="PASSWORD"
-                android:textColor="@color/progress_loading_color"/>
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/pwd_text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/hint_color"
+            android:theme="@style/MyEditTextTheme">
 
-            <EditText
+            <org.custom_font_library.CustomEditText
+                style="@style/Linotte_Light"
                 android:id="@+id/edt_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password"
-                android:textColorHint="@color/signIn_txt"
+                android:hint="@string/edt_password_hint"
+                android:textColorHint="@color/hint_color"
                 android:background="@null"
                 android:inputType="textPassword"
-                android:padding="10dp"
-                android:drawableLeft="@android:drawable/ic_lock_lock"
-                android:drawableStart="@android:drawable/ic_lock_lock"
-                android:drawablePadding="7dp"
+                android:paddingTop="10dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="10dp"
+                android:drawableLeft="@drawable/password_icon"
+                android:drawableStart="@drawable/password_icon"
+                android:drawablePadding="15dp"
                 android:textSize="16sp"
-                android:textColor="@color/signIn_txt"/>
+                android:textColor="@color/hint_color"/>
+        </android.support.design.widget.TextInputLayout>
 
-            <View
-                android:id="@+id/view_password"
+        <View
+            android:id="@+id/view_password"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/hint_color"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/confirm_pwd_text_input_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/hint_color"
+            android:theme="@style/MyEditTextTheme">
+
+            <org.custom_font_library.CustomEditText
+                style="@style/Linotte_Light"
+                android:id="@+id/edt_confirm_password"
                 android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginRight="15dp"
-                android:layout_marginEnd="15dp"
-                android:background="@color/black"/>
-        </LinearLayout>
-    </ScrollView>
+                android:layout_height="wrap_content"
+                android:hint="@string/edt_confirm_pwd_hint"
+                android:textColorHint="@color/hint_color"
+                android:background="@null"
+                android:inputType="textPassword"
+                android:paddingTop="10dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp"
+                android:paddingBottom="10dp"
+                android:drawableLeft="@drawable/confirm_password"
+                android:drawableStart="@drawable/confirm_password"
+                android:drawablePadding="15dp"
+                android:textSize="16sp"
+                android:textColor="@color/hint_color"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <View
+            android:id="@+id/view_confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginEnd="25dp"
+            android:background="@color/hint_color"/>
+    </LinearLayout>
+
+    <org.custom_font_library.CustomTextView
+        style="@style/Linotte_Light"
+        android:id="@+id/tv_signup_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_above="@+id/tv_signup_login"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@drawable/rounded_corners_background"
+        android:textSize="16sp"
+        android:textColor="@color/pure_white"
+        android:text="@string/submit_btn"
+        android:filterTouchesWhenObscured="true" />
+
+    <org.custom_font_library.CustomTextView
+        style="@style/Linotte_Light"
+        android:id="@+id/tv_signup_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:gravity="center"
+        android:background="@drawable/rounded_colored_border_bg"
+        android:textSize="16sp"
+        android:textColor="@color/blue"
+        android:text="@string/login_btn"
+        android:filterTouchesWhenObscured="true" />
 </RelativeLayout>

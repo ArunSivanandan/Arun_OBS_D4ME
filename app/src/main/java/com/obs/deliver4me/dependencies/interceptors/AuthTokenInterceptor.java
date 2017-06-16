@@ -31,7 +31,7 @@ public class AuthTokenInterceptor implements Interceptor {
             if (sessionManager.getToken() != null) {
                 // Request customization: add request headers
                 requestBuilder = original.newBuilder()
-                        .header("Authorization", "Basic c29jOnNvYw==")
+                        .header("Authorization", "bearer " + sessionManager.getToken())
                         .method(original.method(), original.body());
             } else {
                 // Request customization: add request headers

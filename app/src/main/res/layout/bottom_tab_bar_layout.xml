@@ -15,7 +15,8 @@
         android:paddingTop="6dp"
         android:weightSum="4">
 
-        <RadioButton
+        <org.custom_font_library.CustomRadioButton
+            style="@style/Linotte_Light"
             android:id="@+id/rb_feed"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -29,7 +30,8 @@
             android:textColor="@drawable/selector_tab_text_color"
             android:textSize="11sp" />
 
-        <RadioButton
+        <org.custom_font_library.CustomRadioButton
+            style="@style/Linotte_Light"
             android:id="@+id/rb_explore"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -44,7 +46,8 @@
             android:textColor="@drawable/selector_tab_text_color"
             android:textSize="11sp" />
 
-        <RadioButton
+        <org.custom_font_library.CustomRadioButton
+            style="@style/Linotte_Light"
             android:id="@+id/rb_buzz"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -59,7 +62,8 @@
             android:textColor="@drawable/selector_tab_text_color"
             android:textSize="11sp" />
 
-        <RadioButton
+        <org.custom_font_library.CustomRadioButton
+            style="@style/Linotte_Light"
             android:id="@+id/rb_buzz_notification"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

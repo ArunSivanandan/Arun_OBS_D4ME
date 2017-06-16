@@ -2,6 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     android:id="@+id/rlt_map"
     tools:context=".sprint1.views.fragments.MapsActivity" >
 
@@ -30,7 +31,8 @@
         android:progressDrawable="@drawable/seekbar_background"
         android:thumb="@drawable/seekbar_circle" />
 
-    <TextView
+    <org.custom_font_library.CustomTextView
+        style="@style/Linotte_Light"
         android:id="@+id/tv_miles"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

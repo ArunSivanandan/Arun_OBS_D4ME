@@ -6,7 +6,7 @@
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/transparent</item>
+        <item name="colorPrimaryDark">@color/black</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
@@ -20,5 +20,42 @@
     <style name="MyAnimation.Window" parent="@android:style/Animation.Activity">
         <item name="android:windowEnterAnimation">@anim/dialog_anim_in</item>
         <item name="android:windowExitAnimation">@anim/dialog_anim_out</item>
+    </style>
+
+    <style name="MyEditTextTheme">
+        <item name="colorAccent">@color/blue</item>
+        <item name="colorControlNormal">@color/blue</item>
+        <item name="colorControlActivated">@color/blue</item>
+        <item name="colorControlHighlight">@color/blue</item>
+    </style>
+
+    <!--Font Styles-->
+    <style name="Linotte_Light" parent="@android:style/Theme">
+        <item name="typeface">fonts/Linotte_Light.otf</item>
+    </style>
+
+    <style name="Linotte_Bold" parent="@android:style/Theme">
+        <item name="typeface">fonts/Linotte_Bold.otf</item>
+    </style>
+
+    <style name="Linotte_Heavy" parent="@android:style/Theme">
+        <item name="typeface">fonts/Linotte_Heavy.otf</item>
+    </style>
+
+    <style name="Linotte_Regular" parent="@android:style/Theme">
+        <item name="typeface">fonts/Linotte_Regular.otf</item>
+    </style>
+
+    <style name="Linotte_Semi_Bold" parent="@android:style/Theme">
+        <item name="typeface">fonts/Linotte_Semi_Bold.otf</item>
+    </style>
+
+    <style name="switchCompact">
+        <!-- Active thumb color & Active track color(30% transparency) -->
+        <item name="colorControlActivated">@color/orange</item>
+        <!-- Inactive thumb color -->
+        <item name="colorSwitchThumbNormal">@color/pure_white</item>
+        <!-- Inactive track color(30% transparency) -->
+        <item name="android:colorForeground">@color/orange</item>
     </style>
 </resources>

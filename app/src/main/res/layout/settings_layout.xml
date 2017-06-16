@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pure_white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rlt_row_one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <org.custom_font_library.CustomTextView
+            style="@style/Linotte_Semi_Bold"
+            android:id="@+id/tv_change_pwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@drawable/password_icon"
+            android:drawableStart="@drawable/password_icon"
+            android:drawablePadding="15dp"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/hint_color"
+            android:text="@string/txt_change_pwd_title" />
+
+        <ImageView
+            android:id="@+id/iv_forward_arrow_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_change_pwd"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/forward_arrow"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/transparent_hint_color"/>
+
+    <RelativeLayout
+        android:id="@+id/rlt_row_two"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_forward_arrow_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_notification"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/forward_arrow"/>
+
+        <org.custom_font_library.CustomTextView
+            style="@style/Linotte_Semi_Bold"
+            android:id="@+id/tv_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@drawable/notification"
+            android:drawableStart="@drawable/notification"
+            android:drawablePadding="15dp"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/hint_color"
+            android:text="@string/txt_notification_settings" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/transparent_hint_color"/>
+
+    <RelativeLayout
+        android:id="@+id/rlt_row_three"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <org.custom_font_library.CustomTextView
+            style="@style/Linotte_Semi_Bold"
+            android:id="@+id/tv_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:drawableLeft="@drawable/logout"
+            android:drawableStart="@drawable/logout"
+            android:drawablePadding="15dp"
+            android:gravity="start"
+            android:textSize="16sp"
+            android:textColor="@color/hint_color"
+            android:text="@string/txt_logout" />
+
+        <ImageView
+            android:id="@+id/iv_forward_arrow_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/tv_logout"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/forward_arrow"/>
+    </RelativeLayout>
+</LinearLayout>

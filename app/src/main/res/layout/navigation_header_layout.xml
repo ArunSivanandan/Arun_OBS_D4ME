@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/profile_bg"
+    android:layout_height="250dp"
+    android:background="@drawable/sidemenu_bg"
     android:orientation="horizontal">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/profileImageHeader"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_margin="20dp"
+        android:layout_margin="10dp"
         android:layout_gravity="center"
-        android:src="@color/landing_border"/>
+        android:src="@drawable/user_img"/>
 
-    <TextView
+    <org.custom_font_library.CustomTextView
+        style="@style/Linotte_Bold"
         android:id="@+id/tv_userDAName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
         android:layout_gravity="center"
         android:textSize="16sp"
         android:textColor="@color/black"
-        android:text="Username"/>
+        android:text="User Name"/>
 </LinearLayout>

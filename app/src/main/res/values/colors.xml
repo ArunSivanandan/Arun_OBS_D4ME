@@ -4,38 +4,14 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <!--Sidemenu colors-->
     <color name="blue">#02bac2</color>
+    <color name="hint_color">#7f7f7f</color>
+    <color name="transparent_hint_color">#307f7f7f</color>
+    <color name="dark_gray">#494949</color>
+    <color name="orange">#f4530c</color>
 
     <color name="progress_loading_color">#0faaf7</color>
     <color name="transparent">#00000000</color>
     <color name="pure_white">#ffffff</color>
     <color name="black">#000000</color>
-    <color name="orange">#f26810</color>
-    <color name="signIn_txt">#969696</color>
-    <color name="landing_border">#44bfbfbf</color>
-    <color name="signIn_border">#44bfbfbf</color>
-    <color name="signUp1_title">#5b5a5a</color>
-    <color name="signUp1_txt">#9f9f9f</color>
-    <color name="signUp1_border">#bcbcbc</color>
-    <color name="signUp2_txt">#5b5b5b</color>
-    <color name="signUp2_seek_primary">#ff6400</color>
-    <color name="signUp2_seek_secondary">#eaeaea</color>
-    <color name="signUp3_txt">#de7f7f</color>
-    <color name="forgotPwd_txt">#807f7f</color>
-    <color name="forgotPwd_error_txt">#de7676</color>
-    <color name="forgotPwd_error_bg">#fddcdc</color>
-    <color name="forgotPwd_error_border">#df7777</color>
-    <color name="forgotPwd_success_txt">#82b539</color>
-    <color name="forgotPwd_normal_txt">#828080</color>
-    <color name="seekbar_average">#f26810</color>
-    <color name="seekbar_strong">#00ff00</color>
-    <color name="seekbar_week">#ff0000</color>
-    <color name="light_green">#d5f9e5</color>
-    <color name="dark_green">#23c76e</color>
-    <color name="light_pink">#fde3e3</color>
-    <color name="dark_pink">#fe8383</color>
-    <color name="gray_line">#b9b9b9</color>
-    <color name="menu_font">#909090</color>
-    <color name="light_orange">#ec7b2e</color>
 </resources>

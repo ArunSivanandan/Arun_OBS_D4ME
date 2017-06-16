@@ -43,6 +43,7 @@ import com.obs.deliver4me.R;
 import com.obs.deliver4me.configs.Constants;
 import com.obs.deliver4me.configs.RunTimePermission;
 import com.obs.deliver4me.customviews.VerticalSeekBar;
+import com.obs.deliver4me.sprint1.views.activity.HomeActivity;
 import com.obs.deliver4me.sprint1.views.service.GeofenceTransitionsIntentService;
 
 import java.util.ArrayList;
@@ -124,6 +125,7 @@ public class MapsActivity extends Fragment implements OnMapReadyCallback, Animat
     }
 
     private void initviews() {
+        HomeActivity.defaultInstance().setHeader(context.getResources().toString());
         googleApiClient = new GoogleApiClient.Builder(context)
                 .addApi(LocationServices.API)
                 .addConnectionCallbacks(this)

@@ -21,8 +21,21 @@ public class SessionManager {
         AppController.getAppComponent().inject(this);
     }
 
+    public void setFbUser(boolean isFbUser) {
+        sharedPreferences.edit().putBoolean("isFbUser", isFbUser).apply();
+    }
+
+    public boolean isFbUser() {
+        return sharedPreferences.getBoolean("isFbUser", false);
+    }
+
     public String getToken() {
         return sharedPreferences.getString("token", "");
+    }
+
+    // Store AccessToken
+    public void setToken(String accessToken) {
+        sharedPreferences.edit().putString("token", accessToken).apply();
     }
 
     // Store UserName
@@ -42,6 +55,14 @@ public class SessionManager {
 
     public int getSlideMenuPosition() {
         return sharedPreferences.getInt("menuposition", 0);
+    }
+
+    public void clear() {
+        sharedPreferences.edit().putString("token", "").apply();
+    }
+
+    public void clearAll() {
+        sharedPreferences.edit().clear().apply();
     }
 
 }
